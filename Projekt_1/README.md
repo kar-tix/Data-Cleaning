@@ -1,12 +1,14 @@
 # 📚 Czyszczenie danych: transakcje finansowe
 
-## Wstęp
+## 🎯 Wprowadzenie
 
 Dane zostały wygenerowane maszynowo. Zawierają 10 000 wierszy na temat transakcji finansowych.
 
 Do czyszczenia danych zostało wykorzystane Power Query oraz M-Language.
 
-## Proces
+![Dane niewyczyszczone](img/img2.png)
+
+## ⚙️ Proces
 
 1. Zmiana pierwszych wierszy na nagłówki danych oraz aby zaczynały się od wielkich liter.
 
@@ -55,3 +57,9 @@ Do czyszczenia danych zostało wykorzystane Power Query oraz M-Language.
 ```
 #"Zsumowanie kosztów transakcji" = Table.AddColumn(#"Zmieniono typ1", "Total Transaction Cost", each [Amount] + [Fees], Currency.Type)
 ```
+
+## ✅ Wynik
+
+![Power Query kroki](img/img1.png)
+
+![Dane wyczyszczone](img/img3.png)
