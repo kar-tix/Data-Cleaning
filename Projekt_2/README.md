@@ -72,3 +72,13 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
    Przyglądając się danym, w szczególności wadze i długości ciała, można stwierdzić, że obserwowane zwierzęta to wiewiórki. Wszystkie dane z brakującymi nazwami zwierząt wprowadził pracownik "Bob Bobson". W celu uniknięcia błędów i niepoprawnych statystyk dane te można by było usunąć, jednak przyjęłam, że mam możliwość skontaktowania się z tą osobą, która potwierdziła, że są to wiewiórki.</br>
    Uzupełniłam brakujące nazwy.</br>
    ![Statystyki państw](img/img6.png)
+
+7. **Analiza poprawności danych**
+
+   Wszystkie dane liczbowe zostały sprawdzone pod kątem poprawności. Z opisu danych wynika, że dane wprowadzali ludzie - pracownicy, więc możliwe, że wkradły się błędy.
+
+- Waga
+  - Rysie</br>
+
+  ![Waga - rysie_1](img/img7_1.png)![Waga - rysie_2](img/img7_2.png) </br>
+  Widać, że jedna wartość znacznie wyróżnia się od innych, średnia
