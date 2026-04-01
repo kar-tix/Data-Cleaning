@@ -93,11 +93,11 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
   - Waga
     ![Waga - bizony_1](img/img7_5.png)![Waga - bizony_2](img/img7_6.png) </br>
     Na wykresach oraz na odchyleniu standardowym widać, że jest kilka skrajnych wartości. Są one bardzo niskie, dlatego postanowiłam przeanalizować je w tabeli z danymi porównując inne czynniki. Jak można zauważyć w tabeli poniżej osobniki z najmniejszymi wagami mają również najmniejsze długości ciała, co może oznaczać, że są to prawdopodobnie bardzo młode osobniki, dlatego dane pozostawiłam bez zmian.
-    ![Waga - bizony_3](img/img7_7.png)</br>
+    ![Waga - bizony_3](img/img7_7.png)</br></br>
 
   - Długość
     W przypadku długości osobników występuje podobny rozkład jak przy wadze. Pojawiają się wartości skrajnie małe, ale porównując je z wagą okazuje się, że to te same osobniki, dlatego pozostawiono dane bez zmian.
-    ![Długość - bizony_1](img/img7_8.png)</br>
+    ![Długość - bizony_1](img/img7_8.png)</br></br>
 
 - Wiewiórki pospolite
   - Waga
@@ -120,5 +120,13 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
                                                                 {"Weight_kg"}),
 ```
 
+</br>
+
 - Jeże
   - Waga
+    ![Waga - jeże_1](img/img7_12.png)![Waga - jeże_2](img/img7_13.png)</br>
+    W przypadku wagi nie widać żadnych wartości odstających. Pojawiły się natomiast pusta wartości, które także uzupełniono o mediany dla poszczególnych płci: samice - 0,7kg, samce - 0,8kg.
+
+  - Długość
+    ![Długość - jeże_1](img/img7_14.png)![Długość - jeże_2](img/img7_15.png)</br>
+    Wartość ujemna została zmieniona na dodatnią - po przeanalizowaniu danych okazuje się, że jest to po prostu błąd, podobnie jak w przypadku samicy, której długość osiągnęła aż 151cm. Tak jak poprzednio błędy zostają zamienione na mediany: samice - 18cm, samce 21cm.
