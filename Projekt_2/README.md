@@ -110,4 +110,15 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
     ![Długość - wiewiórki_1](img/img7_11.png)</br>
     Ponadto widać także puste komórki.
 
-  !!! WYSTĘPUJE NULL DLA 6 OSOBNIKÓW DLA WAGI I DŁUGOŚCI CIAŁA!!!
+  W przypadku wagi i długości ciała pojawiło się 6 pustych komórek. Po przyjrzeniu się tym danym, okazuje się, że wszystkie należą do tych samych rekordów. W związku, że różnice pomiędzy osobnikami poszczególnych płci są tak naprawdę bardzo mało, postawiłam uzupełnić te dane medianami wag i długości ciała dla poszczególnych płci. Mediana wagi dla obu płci wynosi 0,3kg natomiast długość ciała dla samic to 20cm, a dla samców 21cm.
+
+```
+    #"Zmiana wagi ""null"" dla wiewiórek" = Table.ReplaceValue(#"Wartości nieujemne",
+                                                                each [Weight_kg],
+                                                                each if [Animal_type] = "Red Squirrel" and [Weight_kg] = null  then 0.3 else [Weight_kg],
+                                                                Replacer.ReplaceValue,
+                                                                {"Weight_kg"}),
+```
+
+- Jeże
+  - Waga
