@@ -81,7 +81,8 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
 
 - Rysie</br>
   - Waga
-    ![Waga - rysie_1](img/img7_1.png)![Waga - rysie_2](img/img7_2.png) </br>
+    ![Waga - rysie_1](img/img7_1.png)
+    <img src="img/img7_2.png" width="50%" height="50%"> </br>
     Jedna wartość znacznie wyróżnia się od innych, wynosi aż 171kg, podczas gdy mediana wagi rysi wynosi 22kg - jest to ewidentny błąd. W związku z tym, że date nie muszą spełniać surowych norm postanowiłam zamienić tę wartość na medianę. Osobnik, przy którym pojawił się błąd, był samcem, ale tak się składam, że mediana dla obu płci wynosi 22kg.
 
   - Długość ciała</br>
