@@ -80,9 +80,8 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
    Wszystkie dane liczbowe zostały sprawdzone pod kątem poprawności. Z opisu danych wynika, że dane wprowadzali ludzie - pracownicy, więc możliwe, że wkradły się błędy. W tym celu otworzone odpowiednie miary w tabelach przestawnych.
 
 - Rysie</br>
-  - Waga
-    ![Waga - rysie_1](img/img7_1.png)
-    <img src="img/img7_2.png" width="50%" height="50%"> </br>
+  - Waga</br>
+    ![Waga - rysie_1](img/img7_1.png)![Waga - rysie_2](img/img7_2.png) </br>
     Jedna wartość znacznie wyróżnia się od innych, wynosi aż 171kg, podczas gdy mediana wagi rysi wynosi 22kg - jest to ewidentny błąd. W związku z tym, że date nie muszą spełniać surowych norm postanowiłam zamienić tę wartość na medianę. Osobnik, przy którym pojawił się błąd, był samcem, ale tak się składam, że mediana dla obu płci wynosi 22kg.
 
   - Długość ciała</br>
@@ -91,22 +90,22 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
     Widać dwa odchyły długości odstające od grupy, są to wartości: 131cm dla samców oraz 52cm dla samic. Wartości je jednak są całkowicie w normie przy większych okazach samców i mniejszych samic, dlatego uznaje się je za poprawne.</br></br>
 
 - Bizony Europejskie</br>
-  - Waga
+  - Waga</br>
     ![Waga - bizony_1](img/img7_5.png)![Waga - bizony_2](img/img7_6.png) </br>
     Na wykresach oraz na odchyleniu standardowym widać, że jest kilka skrajnych wartości. Są one bardzo niskie, dlatego postanowiłam przeanalizować je w tabeli z danymi porównując inne czynniki. Jak można zauważyć w tabeli poniżej osobniki z najmniejszymi wagami mają również najmniejsze długości ciała, co może oznaczać, że są to prawdopodobnie bardzo młode osobniki, dlatego dane pozostawiłam bez zmian.
     ![Waga - bizony_3](img/img7_7.png)</br></br>
 
-  - Długość
+  - Długość ciała</br>
     W przypadku długości osobników występuje podobny rozkład jak przy wadze. Pojawiają się wartości skrajnie małe, ale porównując je z wagą okazuje się, że to te same osobniki, dlatego pozostawiono dane bez zmian.
     ![Długość - bizony_1](img/img7_8.png)</br></br>
 
 - Wiewiórki pospolite
-  - Waga
+  - Waga</br>
     ![Waga - wiewiórki_1](img/img7_9.png)![Waga - wiewiórki_2](img/img7_10.png) </br>
     W danych widać wartości ujemnie, które są ewidentnymi błędami. Po dokładnym przyjrzeniu się danym można wywnioskować, że osoba wprowadzająca wartości przez przypadek postawiła znak ujemny, dlatego usunięto wartości ujemne i dane nie będą odstawać od pozostałych.
     Po zmianie wartości pozostało jeszcze jedno odchylenie dla samców wynoszące 0,2kg. Porównując te dane do długości ciała, która wynosi 14cm, i równocześnie jest najmniejszym wynikiem w grupie, można uznać, że badany osobnik jest młodą wiewiórką, dlatego pozostawiono dane bez zmian.</br>
 
-  - Długość
+  - Długość ciała</br>
     Podobnie jak w przypadku wagi pojawiły się wartości ujemne, które zamieniłam na dodatnie.
     ![Długość - wiewiórki_1](img/img7_11.png)</br>
     Ponadto widać także puste komórki.
@@ -124,10 +123,10 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
 </br>
 
 - Jeże
-  - Waga
+  - Waga</br></br>
     ![Waga - jeże_1](img/img7_12.png)![Waga - jeże_2](img/img7_13.png)</br>
     W przypadku wagi nie widać żadnych wartości odstających. Pojawiły się natomiast pusta wartości, które także uzupełniono o mediany dla poszczególnych płci: samice - 0,7kg, samce - 0,8kg.
 
-  - Długość
+  - Długość</br>
     ![Długość - jeże_1](img/img7_14.png)![Długość - jeże_2](img/img7_15.png)</br>
     Wartość ujemna została zmieniona na dodatnią - po przeanalizowaniu danych okazuje się, że jest to po prostu błąd, podobnie jak w przypadku samicy, której długość osiągnęła aż 151cm. Tak jak poprzednio błędy zostają zamienione na mediany: samice - 18cm, samce 21cm.
