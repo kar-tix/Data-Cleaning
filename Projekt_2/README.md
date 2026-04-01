@@ -67,6 +67,8 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
 
    - Przystosowanie danych do polskiego formatu. Zmiana typów danych na odpowiednie formaty.
 
+   - W przypadku płci dla pustych kolumn zastosowano przypis "Not determined", który już istnieje w danych.
+
 6. **Uzupełnienie brakujących wartości**
 
    Przyglądając się danym, w szczególności wadze i długości ciała, można stwierdzić, że obserwowane zwierzęta to wiewiórki. Wszystkie dane z brakującymi nazwami zwierząt wprowadził pracownik "Bob Bobson". W celu uniknięcia błędów i niepoprawnych statystyk dane te można by było usunąć, jednak przyjęłam, że mam możliwość skontaktowania się z tą osobą, która potwierdziła, że są to wiewiórki.</br>
@@ -75,10 +77,37 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
 
 7. **Analiza poprawności danych**
 
-   Wszystkie dane liczbowe zostały sprawdzone pod kątem poprawności. Z opisu danych wynika, że dane wprowadzali ludzie - pracownicy, więc możliwe, że wkradły się błędy.
+   Wszystkie dane liczbowe zostały sprawdzone pod kątem poprawności. Z opisu danych wynika, że dane wprowadzali ludzie - pracownicy, więc możliwe, że wkradły się błędy. W tym celu otworzone odpowiednie miary w tabelach przestawnych.
 
-- Waga
-  - Rysie</br>
+- Rysie</br>
+  - Waga
+    ![Waga - rysie_1](img/img7_1.png)![Waga - rysie_2](img/img7_2.png) </br>
+    Jedna wartość znacznie wyróżnia się od innych, wynosi aż 171kg, podczas gdy mediana wagi rysi wynosi 22kg - jest to ewidentny błąd. W związku z tym, że date nie muszą spełniać surowych norm postanowiłam zamienić tę wartość na medianę. Osobnik, przy którym pojawił się błąd, był samcem, ale tak się składam, że mediana dla obu płci wynosi 22kg.
 
-  ![Waga - rysie_1](img/img7_1.png)![Waga - rysie_2](img/img7_2.png) </br>
-  Widać, że jedna wartość znacznie wyróżnia się od innych, średnia
+  - Długość ciała</br>
+    W przypadku długości ciała nie zauważono żadnych anomalii.
+    ![Długość ciała - rysie_1](img/img7_3.png)![Długość ciała - rysie_2](img/img7_4.png) </br>
+    Widać dwa odchyły długości odstające od grupy, są to wartości: 131cm dla samców oraz 52cm dla samic. Wartości je jednak są całkowicie w normie przy większych okazach samców i mniejszych samic, dlatego uznaje się je za poprawne.</br></br>
+
+- Bizony Europejskie</br>
+  - Waga
+    ![Waga - bizony_1](img/img7_5.png)![Waga - bizony_2](img/img7_6.png) </br>
+    Na wykresach oraz na odchyleniu standardowym widać, że jest kilka skrajnych wartości. Są one bardzo niskie, dlatego postanowiłam przeanalizować je w tabeli z danymi porównując inne czynniki. Jak można zauważyć w tabeli poniżej osobniki z najmniejszymi wagami mają również najmniejsze długości ciała, co może oznaczać, że są to prawdopodobnie bardzo młode osobniki, dlatego dane pozostawiłam bez zmian.
+    ![Waga - bizony_3](img/img7_7.png)</br>
+
+  - Długość
+    W przypadku długości osobników występuje podobny rozkład jak przy wadze. Pojawiają się wartości skrajnie małe, ale porównując je z wagą okazuje się, że to te same osobniki, dlatego pozostawiono dane bez zmian.
+    ![Długość - bizony_1](img/img7_8.png)</br>
+
+- Wiewiórki pospolite
+  - Waga
+    ![Waga - wiewiórki_1](img/img7_9.png)![Waga - wiewiórki_2](img/img7_10.png) </br>
+    W danych widać wartości ujemnie, które są ewidentnymi błędami. Po dokładnym przyjrzeniu się danym można wywnioskować, że osoba wprowadzająca wartości przez przypadek postawiła znak ujemny, dlatego usunięto wartości ujemne i dane nie będą odstawać od pozostałych.
+    Po zmianie wartości pozostało jeszcze jedno odchylenie dla samców wynoszące 0,2kg. Porównując te dane do długości ciała, która wynosi 14cm, i równocześnie jest najmniejszym wynikiem w grupie, można uznać, że badany osobnik jest młodą wiewiórką, dlatego pozostawiono dane bez zmian.</br>
+
+  - Długość
+    Podobnie jak w przypadku wagi pojawiły się wartości ujemne, które zamieniłam na dodatnie.
+    ![Długość - wiewiórki_1](img/img7_11.png)</br>
+    Ponadto widać także puste komórki.
+
+  !!! WYSTĘPUJE NULL DLA 6 OSOBNIKÓW DLA WAGI I DŁUGOŚCI CIAŁA!!!
