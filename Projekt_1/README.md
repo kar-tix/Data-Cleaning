@@ -85,7 +85,7 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
     Jedna wartość znacznie wyróżnia się od innych, wynosi aż 171kg, podczas gdy mediana wagi rysi wynosi 22kg - jest to ewidentny błąd. W związku z tym, że date nie muszą spełniać surowych norm postanowiłam zamienić tę wartość na medianę. Osobnik, przy którym pojawił się błąd, był samcem, ale tak się składam, że mediana dla obu płci wynosi 22kg.
 
   - Długość ciała</br>
-    W przypadku długości ciała nie zauważono żadnych anomalii.</br>
+    W przypadku długości ciała nie zauważono żadnych anomalii.</br></br>
     ![Długość ciała - rysie_1](img/img7_3.png)![Długość ciała - rysie_2](img/img7_4.png) </br>
     Widać dwa odchyły długości odstające od grupy, są to wartości: 131cm dla samców oraz 52cm dla samic. Wartości je jednak są całkowicie w normie przy większych okazach samców i mniejszych samic, dlatego uznaje się je za poprawne.</br></br>
 
