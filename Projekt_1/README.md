@@ -144,5 +144,21 @@ W zestawie danych znajduje się wiele wartości null, jedna kolumna jest całkow
                                                                 (currentValue, baseValue, replaceValue) => if baseValue <> null and baseValue < 0 then null else currentValue, {"Latitude", "Longitude"}),
 ```
 
-- Daty
-  Wczytując się w początkową notatkę danych, okazuje się, że jest osoba, która używa amerykańskiego formatu danych i rzeczywiście można to zauważyć, gdyż z ustaleń zestawu danych wynika, że obserwacja zwierzat miała miejsca od marca do czerwca 2024r. a dane Jamesa Johnsona po zostawieniu w formie jakiej są pokazałyby miesiące takie jak lipiec, wrzesień czy nawet listopad.
+- Daty</br>
+  Wczytując się w początkową notatkę danych, okazuje się, że jest osoba, która używa amerykańskiego formatu danych i rzeczywiście można to zauważyć, gdyż z ustaleń zestawu danych wynika, że obserwacja zwierząt miała miejsca od marca do czerwca 2024r. a dane Jamesa Johnsona po zostawieniu w formie jakiej są pokazałyby miesiące takie jak lipiec, wrzesień czy nawet listopad.
+  Do naprawy stworzono kolumnę niestandardową z kodem:
+
+  ```
+  =if [Data_compiled_by] = "James Johnson"
+  then Date.From([Observation_date], "en-US")
+  else Date.From([Observation_date], "pl-PL")
+  ```
+
+- Imiona zwierząt</br>
+  Ostatnią częścią jest podanie imion zwierząt. 795 rekordów nie ma w ogóle imienia oraz Bob Bobson nazwał 18 osobników swoim imieniem i nazwiskiem. Wartości te postanowiłam zamienić na "Not Determined".
+
+## 💡 Konkluzja
+
+Po wyczyszczeniu danych pozostało 833 rekordów, co stanowi ok. 82% pierwotnych danych. Pomimo skrupulatnego czyszczenia niektóre wartości pozostawiłam puste ze względu na wartość innych danych w poszczególnych rekordach.</br>
+W niepoprawności danych główną przyczyną błędów byli ludzie, którzy robili literówki, zapominali o wpisaniu danych lub mylili się (chociażby wpisanie błędnych współrzędnych). Dane te zostały naprawione przy drobnych błędach jak literówka czy dodanie znaku "-", gdzie nie był on potrzebny, w przypadku braku danych lub wartości odstających zastosowano estymacje.</br>
+W przyszłości zalecane byłoby wprowadzenie walidacji danych, jak chociażby ujednolicenie systemu dat lub automatycznie pobieranie daty podczas wypełniania danych, podobnie jak zastosowanie lokalizacji, aby nie powstawały błędy przy współrzędnych.
